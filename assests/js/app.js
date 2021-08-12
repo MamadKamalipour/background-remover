@@ -40,3 +40,14 @@ async function RemoveBgFunction() {
         alert("somthing wrong", error)
     }
 }
+
+
+//logout
+const logOutBtn = document.getElementById("logOut")
+    //event listener
+logOutBtn.addEventListener("click", () => {
+    localStorage.removeItem("status")
+    loginSection.hidden = false
+    mainApp.hidden = true
+
+})
