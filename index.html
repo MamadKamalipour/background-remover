@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="assests/css/style.css">
+    <title>bgRemover</title>
+</head>
+
+<body>
+    <!-- container -->
+    <section id="loginSection">
+        <div class="container " id="container">
+            <div class="form-container sign-in-container">
+                <form action="#">
+                    <h1>Login</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <span>or use your account</span>
+                    <input id="loginEmail" type="email" placeholder="Email">
+                    <input id="loginPass" type="password" placeholder="Password">
+                    <a href="#">Forgot Your Password?</a>
+                    <button id="loginUser">log in</button>
+                </form>
+            </div>
+            <div class="form-container sign-up-container">
+                <form action="#" id="signInForm">
+                    <h1>Create Account</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <span>use your email for registration</span>
+                    <input id="signInName" type="text" placeholder="Name" required>
+                    <input id="email" type="email" placeholder="Email" required>
+                    <input id="password" type="password" placeholder="Password" required>
+                    <input id="cpassword" type="password" placeholder="Confirm Password" required>
+                    <button id="createUser">Sign Up</button>
+                </form>
+            </div>
+
+            <div class=" overlay-container ">
+                <div class="overlay ">
+                    <div class="overlay-panel overlay-left ">
+                        <h1>Welcome Back!</h1>
+                        <p>Please Login to your <strong>BOTOSTART</strong> account with your personal info </p>
+                        <button class="ghost " id="logIn">log in</button>
+                    </div>
+                    <div class="overlay-panel overlay-right ">
+                        <h1>hello ,friend!</h1>
+                        <p>If you have an <strong>account</strong> login with your email</p>
+                        <button class="ghost" id="signUp">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="error">
+
+        </div>
+    </section>
+    <section id="mainApp" hidden>
+        <div class="container main-app">
+            <div class="main">
+                <h1 class="text-center mt-2">Removebg</h1>
+                <span class="text-center">choose an image to remove background</span>
+                <input class="image-input " id="image-input" type="file" accept="image/png, image/jpeg">
+                <button class="removebg-btn" id="removeBg">Remove BackGround</button>
+                <img src="./assests/img/1.jpg" id="image-loader" class="image-loader" alt="">
+            </div>
+            <div class="side-bar">
+                <div class="sidebar-wrapper">
+                    <h2 class="text-center sidebar-title">Welcome Back!</h2>
+                    <p class="sidebar-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti expedita dolorum porro iure doloremque, totam harum excepturi, ipsa eligendi sint repudiandae odio non! Culpa, omnis laudantium. Dicta veniam distinctio porro?</p>
+                    <button id="logOut">
+                        <span>Logout</span>
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <!-- scripts -->
+    <script src="./assests/js/account.js"></script>
+    <script src="./assests/js/app.js "></script>
+</body>
+
+</html>
