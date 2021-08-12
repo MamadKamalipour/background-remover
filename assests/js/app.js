@@ -15,19 +15,19 @@ logInButton.addEventListener("click", (e) => {
 // remove bg api
 const apiKey = "eaaKY4LLpanYF5dcpQETocnf"
 
-const fileField = document.querySelector("#image-input").files
+const fileField = document.querySelector("#image-input")
 const removeBgBtn = document.getElementById("removeBg")
 const imageLoader = document.getElementById("image-loader")
     //event listeners
 removeBgBtn.addEventListener("click", RemoveBgFunction)
 
 async function RemoveBgFunction() {
-    console.log(fileField)
-
+    const image = fileField.files
+    console.log(image)
     const formData = new FormData();
 
     formData.append("size", "auto");
-    formData.append("image_file", fileField[0]);
+    formData.append("image_file", image[0]);
 
     const url = "https://api.remove.bg/v1.0/removebg";
     fetch(url, {
