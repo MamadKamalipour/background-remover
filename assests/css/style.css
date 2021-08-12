@@ -41,12 +41,23 @@ span {
 
 a {
     color: #333;
-    font-size: 14px;
     text-decoration: none;
-    margin: 15px 0;
 }
 
 button {
+    border-radius: 20px;
+    border: 1px solid #ff4b2b;
+    background-color: #ff4b2b;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+.download-btn {
     border-radius: 20px;
     border: 1px solid #ff4b2b;
     background-color: #ff4b2b;
@@ -291,17 +302,30 @@ input {
 .image-loader {
     margin: 0 auto;
     width: 300px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    box-shadow: 0px 15px 30px 5px rgba(0, 0, 0, 0.4);
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
 }
 
 .removebg-btn {
     cursor: pointer;
-    width: 45%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1rem;
+}
+
+.download-btn {
+    cursor: pointer;
 }
 
 .removebg-btn:hover {
+    filter: brightness(95%);
+}
+
+.download-btn:hover {
     filter: brightness(95%);
 }
 
