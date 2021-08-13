@@ -46,8 +46,29 @@ async function RemoveBgFunction() {
 const logOutBtn = document.getElementById("logOut")
     //event listener
 logOutBtn.addEventListener("click", () => {
-    localStorage.removeItem("status")
-    loginSection.hidden = false
-    mainApp.hidden = true
+        localStorage.removeItem("status")
+        loginSection.hidden = false
+        mainApp.hidden = true
 
-})
+    })
+    //Forgot Pass security +100000000000000
+const forgotPass = document.querySelector("#forgotPas")
+forgotPass.addEventListener("click", recoverPass)
+
+function recoverPass() {
+    if (localStorage.getItem("userAccount")) {
+
+        const userInfo = JSON.parse(localStorage.getItem("userAccount"))
+        const errorEL = `
+    <h1 class="text-center">Your Password is: ${userInfo.pass} <br> Enjoy xD</h1>
+    `
+        const errorDiv = document.getElementById("error")
+        errorDiv.innerHTML = errorEL
+        setTimeout(() => {
+            errorDiv.innerHTML = ""
+        }, 5000);
+    } else {
+        alert("you dont have account here dude!")
+
+    }
+}

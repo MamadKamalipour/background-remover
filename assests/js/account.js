@@ -81,7 +81,16 @@ function saveToLocal() {
     }
 
     localStorage.setItem("userAccount", JSON.stringify(userInfo))
+    const errorEL = `
+    <h1 class= "text-center">awsome!<br> account created.</h1>
+    `
+    const errorDiv = document.getElementById("error")
+    errorDiv.innerHTML = errorEL
+    setTimeout(() => {
 
+        errorDiv.innerHTML = ""
+
+    }, 5000);
 }
 
 // Login Into account
@@ -117,7 +126,7 @@ function validatLogin(e) {
 }
 
 // check user information if => exist (login) !=>(show login page)
-function sessiont() {
+function session() {
     if (localStorage.getItem("userAccount") && localStorage.getItem("status")) {
         // show app section
         signInSection.hidden = true
@@ -127,4 +136,4 @@ function sessiont() {
 
 }
 //onload
-sessiont()
+session()
