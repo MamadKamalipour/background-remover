@@ -1,6 +1,13 @@
 const signUpButton = document.getElementById("signUp")
 const logInButton = document.getElementById("logIn")
 const containerDiv = document.getElementById("container")
+    // loader
+const loaderEl = document.querySelectorAll("#loader div")
+loaderEl.forEach(element => {
+    element.hidden = true
+});
+
+
 signUpButton.addEventListener("click", (e) => {
     e.preventDefault()
     containerDiv.classList.add("right-panel-active")
@@ -21,6 +28,10 @@ const imageLoader = document.getElementById("image-loader")
 removeBgBtn.addEventListener("click", RemoveBgFunction)
     // functions
 async function RemoveBgFunction() {
+    loaderEl.forEach(element => {
+        element.hidden = false
+    });
+
     const image = fileField.files
     const formData = new FormData();
     formData.append("image_file", image[0]);
@@ -34,6 +45,10 @@ async function RemoveBgFunction() {
     });
     const photo = await response.blob();
     if (response.status == 200) {
+        loaderEl.forEach(element => {
+            element.hidden = true
+        });
+
         imageLoader.src = URL.createObjectURL(photo);
         imageLoader.hidden = false
     } else {
