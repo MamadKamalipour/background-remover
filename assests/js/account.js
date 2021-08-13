@@ -116,28 +116,15 @@ function validatLogin(e) {
     }
 }
 
-// log in user for 2h only
-function sessiontExp() {
-
-    const now = new Date().getHours()
-    const expTime = now + 2
-
+// check user information if => exist (login) !=>(show login page)
+function sessiont() {
     if (localStorage.getItem("userAccount") && localStorage.getItem("status")) {
         // show app section
         signInSection.hidden = true
         mainApp.hidden = false
-            //session expired and need to log in
-        if (now == expTime) {
-            signInSection.hidden = false
-            mainApp.hidden = true
-            localStorage.removeItem('status');
-        }
     }
 
 
 }
-
-
-
 //onload
-sessiontExp()
+sessiont()
