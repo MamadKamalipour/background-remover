@@ -37,7 +37,7 @@ async function RemoveBgFunction() {
         imageLoader.src = URL.createObjectURL(photo);
         imageLoader.hidden = false
     } else {
-        alert("somthing wrong", error)
+        alert("somthing wrong")
     }
 }
 
